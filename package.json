@@ -1,0 +1,19 @@
+{
+  "name": "url-parameters",
+  "version": "1.0.0",
+  "description": "A package to help you easily manage url parameters with browser history support and listening for changes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["url", "params", "history"],
+  "author": "Mattias Persson <mattias@happypixels.se>",
+  "license": "ISC",
+  "dependencies": {
+    "location-bar": "3.0.1"
+  },
+  "repository": {
+    "type" : "git", 
+    "url" : "https://github.com/mattias-persson/url-parameters.git"
+  }
+}
