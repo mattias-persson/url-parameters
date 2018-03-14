@@ -9,7 +9,7 @@ module.exports = {
         if(onChangeCallback){
             locationBar.onChange(function (queryString) {
                 onChangeCallback({
-                    params: self.getParams(), 
+                    queryParams: self.getParams(), 
                     queryString: queryString
                 });
             });
