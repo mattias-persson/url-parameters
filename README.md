@@ -37,6 +37,9 @@ url.toggle('param', 'value')
 // If multiple values are present they will become a comma separated string.
 url.toggleValue('param', 'value')
 
+// Replace a set of parameter values. Will add non-existent parameters.
+url.replace({param1: value1, param2: value2})
+
 // Remove a parameter.
 url.remove('param')
 

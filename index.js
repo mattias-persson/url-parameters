@@ -1,5 +1,5 @@
-let LocationBar = require("location-bar");
-let locationBar = new LocationBar();
+const LocationBar = require("location-bar");
+const locationBar = new LocationBar();
 
 module.exports = {
     enable(onChangeCallback, pushState){
@@ -91,6 +91,16 @@ module.exports = {
         } else {
             params[param] = value;
         }
+
+        this.apply(params);
+    },
+
+    replace(values){
+        let params = this.getParams();
+
+        Object.keys(values).map(key => {
+            params[key] = values[key];
+        });
 
         this.apply(params);
     },
