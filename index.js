@@ -44,6 +44,20 @@ module.exports = {
         this.apply(params);
     },
 
+    get(param, fallback){
+        if(typeof fallback === 'undefined' || !fallback){
+            fallback = null;
+        }
+
+        let params = this.getParams();
+
+        if(params[param]){
+            return params[param];
+        }
+
+        return fallback;
+    },
+
     toggle(param, value){
         let params = this.getParams();
 

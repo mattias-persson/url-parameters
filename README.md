@@ -43,6 +43,12 @@ url.remove('param')
 // Clear all parameters from the URL.
 url.clear()
 
+// Returns the value of param or null if param is not present. 
+url.get('param')
+
+// Returns the value of param or 'default' if param is not present. 
+url.get('param', 'default') 
+
 // Check if a parameter contains a value, for example in a comma separated list of values.
 url.containsValue('param', 'value')
 ```
