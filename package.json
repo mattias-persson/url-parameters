@@ -1,6 +1,6 @@
 {
   "name": "url-parameters",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "description": "A package to help you easily manage url parameters with browser history support and listening for changes.",
   "main": "index.js",
   "scripts": {
