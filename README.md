@@ -11,7 +11,7 @@ yarn add url-parameters
 ## Usage
 
 ```javascript
-const url = require('url-parameters');
+import url from 'url-parameters';
 
 // Enable the URL listener.
 url.enable(onChange => {
