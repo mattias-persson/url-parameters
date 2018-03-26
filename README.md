@@ -1,5 +1,5 @@
 # url-parameters
-A package to help you easily manage url parameters with browser history support and listening for changes.
+Easily manage and listen for changes in query parameters, with full support for the browser history API.
 
 ## Installation
 ```bash
