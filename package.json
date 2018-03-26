@@ -1,6 +1,6 @@
 {
   "name": "url-parameters",
-  "version": "1.5.3",
+  "version": "1.5.4",
   "description": "Easily manage and listen for changes in query parameters, with full support for the browser history API.",
   "main": "index.js",
   "scripts": {
