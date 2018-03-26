@@ -1,7 +1,7 @@
 {
   "name": "url-parameters",
   "version": "1.5.3",
-  "description": "A package to help you easily manage url parameters with browser history support and listening for changes.",
+  "description": "Easily manage and listen for changes in query parameters, with full support for the browser history API.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,7 +9,11 @@
   "keywords": [
     "url",
     "params",
-    "history"
+    "history",
+    "query parameters",
+    "parameters",
+    "query string",
+    "browserstate"
   ],
   "author": "Mattias Persson <mattias@happypixels.se>",
   "license": "MIT",

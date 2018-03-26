@@ -13,21 +13,27 @@ yarn add url-parameters
 ```javascript
 import url from 'url-parameters';
 
-// Enable the URL listener.
+// Enable the URL listener. This will be triggered on page load and every time a URL parameter changes.
+// You can use onChange.queryParams and onChange.queryString to access
+// the URL parameters as an object or string.
 url.enable(onChange => {
-  // This will be triggered every time a URL parameter changes.
-  // You can use onChange.queryParams and onChange.queryString to access the URL parameters as an object or string.
+  console.log(onChange.queryParams); // object
+  console.log(onChange.queryString); // string
 });
 ```
 
-## Available methods
+## Disabling Push State
+You can disable the Push State by setting the second parameter to `false` when enabling the url listener:
+```javascript
+url.enable(onChangeCallback, false);
+```
+This will add a `#` before the parameters in the URL and will prevent a page reload when the parameters are changed.
+
+## Modifying parameters and their values
+All of these methods will trigger the listener callback in the `enable()` method demonstrated above which provides the updated parameters as an object and as the full query string.
 ```javascript
 
-// Apply a list of parameters to the URL. 
-url.apply('param=value&param2=value2')
-url.apply({param: 'value', param2: 'value2'})
-
-// Add a single parameter to the URL.
+// Add or update a single parameter value.
 url.set('param', 'value')
 
 // Add ?param=value if it's not already present. Remove the parameter if it is already present.
@@ -37,6 +43,10 @@ url.toggle('param', 'value')
 // If multiple values are present they will become a comma separated string.
 url.toggleValue('param', 'value')
 
+// Replace any current query string with the provided list of parameters.
+url.apply('param=value&param2=value2')
+url.apply({param: 'value', param2: 'value2'})
+
 // Replace a set of parameter values. Will add non-existent parameters.
 url.replace({param1: value1, param2: value2})
 
@@ -45,6 +55,10 @@ url.remove('param')
 
 // Clear all parameters from the URL.
 url.clear()
+```
+
+## Accessing parameters and their values directly
+```javascript
 
 // Returns the value of param or null if param is not present. 
 url.get('param')
@@ -55,10 +69,3 @@ url.get('param', 'default')
 // Check if a parameter contains a value, for example in a comma separated list of values.
 url.containsValue('param', 'value')
 ```
-
-## Disabling Push State
-You can disable the Push State by setting the second parameter to `false` when enabling the url listener:
-```javascript
-url.enable(onChangeCallback, false);
-```
-This will add a `#` before the parameters in the URL and will prevent a page reload when the parameters are changed.
