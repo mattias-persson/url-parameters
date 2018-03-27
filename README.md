@@ -1,3 +1,7 @@
+[![Latest Version on NPM](https://img.shields.io/npm/v/url-parameters.svg?style=flat-square)](https://npmjs.com/package/url-parameters)
+[![Total Downloads on NPM](https://img.shields.io/npm/dt/url-parameters.svg)](https://www.npmjs.com/package/url-parameters)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+
 # url-parameters
 Easily manage and listen for changes in query parameters, with full support for the browser history API.
 
