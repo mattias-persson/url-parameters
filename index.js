@@ -46,7 +46,7 @@ Url.prototype.set = function(param, value){
 }
 
 Url.prototype.get = function(param, fallback){
-    if(typeof fallback === 'undefined' || !fallback){
+    if(typeof fallback === 'undefined' || fallback === null){
         fallback = null;
     }
 
