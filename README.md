@@ -72,4 +72,10 @@ url.get('param', 'default')
 
 // Check if a parameter contains a value, for example in a comma separated list of values.
 url.containsValue('param', 'value')
+
+// Returns the full query string.
+url.getQueryString()
+
+// Returns the URL parameters as an object.
+url.getParams()
 ```

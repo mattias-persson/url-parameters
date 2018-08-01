@@ -59,6 +59,10 @@ Url.prototype.get = function(param, fallback){
     return fallback;
 }
 
+Url.prototype.getQueryString = function(){
+    return this.objToQueryString(this.getParams());
+}
+
 Url.prototype.toggle = function(param, value){
     var params = this.getParams();
 
