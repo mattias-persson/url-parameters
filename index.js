@@ -159,6 +159,9 @@ Url.prototype.getParams = function(){
         return {};
     }
 
+    // Handle any backslashes in the string to avoid parsing errors.
+    search = search.replace('\\', '\\\\')
+
     return JSON.parse('{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}');
 }
 
