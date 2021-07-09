@@ -34,7 +34,7 @@ Url.prototype.apply = function(params){
         params = '?' + params;
     }
 
-    locationBar.update(params, {trigger: true});
+    locationBar.update(location.pathname + params, {trigger: true});
 }
 
 Url.prototype.set = function(param, value){
